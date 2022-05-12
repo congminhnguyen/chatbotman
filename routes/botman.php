@@ -12,7 +12,7 @@ use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 
 $botman = resolve('botman');
 
-$botman->hears('GET_STARTED', function ($bot) {
+$botman->hears('Started|GET_STARTED', function ($bot) {
     // $url = 'https://api.giphy.com/v1/gifs/search?q=hello&api_key=RgqXzz5DGwceQSuOAUwNsu5bNkTefi9L&limit=1';
     // $result = json_decode(file_get_contents($url));
     // $img = $result->data[0]->images->downsized_large->url;

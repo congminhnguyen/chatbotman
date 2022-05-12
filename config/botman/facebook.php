@@ -80,15 +80,20 @@ return [
             'composer_input_disabled' => false,
             'call_to_actions' => [
                 [
-                    'title' => 'Bảng giá',
-                    'type' => 'postback',
-                    'payload' => 'Bảng giá',
-                ],
-                [
                     'type' => 'web_url',
                     'title' => 'PXWebShop',
                     'url' => 'https://pxwebshop.com',
                     'webview_height_ratio' => 'full',
+                ],
+                [
+                    'title' => 'Started',
+                    'type' => 'postback',
+                    'payload' => 'Started',
+                ],
+                [
+                    'title' => 'Bảng giá',
+                    'type' => 'postback',
+                    'payload' => 'Bảng giá',
                 ],
             ],
         ],
