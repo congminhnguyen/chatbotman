@@ -1,6 +1,7 @@
 <?php
 
 use App\Conversations\ButtonConversation;
+use App\Conversations\OnboardingConversation;
 use App\Http\Controllers\BotManController;
 use BotMan\BotMan\Messages\Attachments\Image;
 use BotMan\BotMan\Messages\Outgoing\OutgoingMessage;
@@ -56,7 +57,8 @@ $botman->hears('Started|GET_STARTED', function ($bot) {
 
 $botman->hears('tellmemore', function($bot) {
     $bot->reply('Cám ơn bạn đã lựa chọn dịch vụ của chúng tôi.');
-    $bot->reply('Hãy cho chúng tôi biết thêm về thông tin dịch vụ hoặc để lại số điện thoại để nhân viên chúng tôi liên hệ với bạn.');
+    // $bot->reply('Hãy cho chúng tôi biết thêm về thông tin dịch vụ hoặc để lại số điện thoại để nhân viên chúng tôi liên hệ với bạn.');
+    $bot->startConversation(new OnboardingConversation);
 });
 
 $botman->hears('(.*)giá(.*)|(.*)tiền(.*)|Bảng giá', function ($bot) {
