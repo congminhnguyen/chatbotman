@@ -22,37 +22,79 @@ $botman->hears('Started|GET_STARTED', function ($bot) {
     //     new Image($img)
     // );
     // $bot->reply($message);
-    $bot->reply('Chào mừng bạn đến với PXWebShop!');
-    $bot->reply('Bạn muốn sử dụng dịch vụ nào từ chúng tôi?');
+    // px webshop
+    // $bot->reply('Chào mừng bạn đến với PXWebShop!');
+    // $bot->reply('Bạn muốn sử dụng dịch vụ nào từ chúng tôi?');
+    // $bot->reply(
+    //     GenericTemplate::create()
+    //         ->addElements([
+    //             Element::create('Thiết kế web')
+    //                 ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
+    //                 ->image('https://pxwebshop.com/assets/img/service/service1.png')
+    //                 ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+    //                 ->addButton(ElementButton::create('Đặt hàng')
+    //                     ->payload('tellmemore')->type('postback')),
+    //             Element::create('Xây dựng ứng dụng')
+    //                 ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
+    //                 ->image('https://pxwebshop.com/assets/img/service/service1.png')
+    //                 ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+    //                 ->addButton(ElementButton::create('Đặt hàng')
+    //                     ->payload('tellmemore')->type('postback')),
+    //             Element::create('Dịch vụ mạng')
+    //                 ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
+    //                 ->image('https://pxwebshop.com/assets/img/service/service1.png')
+    //                 ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+    //                 ->addButton(ElementButton::create('Đặt hàng')
+    //                     ->payload('tellmemore')->type('postback')),
+    //             Element::create('Thiết kế logo, banner')
+    //                 ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
+    //                 ->image('https://pxwebshop.com/assets/img/service/service1.png')
+    //                 ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+    //                 ->addButton(ElementButton::create('Đặt hàng')
+    //                     ->payload('tellmemore')->type('postback')),
+    //         ])
+    // );
+    // end: pxwebshop
+    
+    // ecommerce
+    $bot->reply('Chào mừng bạn đến với Web!');
+    $bot->reply('Bạn muốn mua sản phẩm nào?');
     $bot->reply(
         GenericTemplate::create()
             ->addElements([
-                Element::create('Thiết kế web')
+                Element::create('Laptop Gaming')
                     ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
-                    ->image('https://pxwebshop.com/assets/img/service/service1.png')
-                    ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+                    ->image('https://fptshop.com.vn/landing-laptop-gaming/Content/Desktop/images/product-banner2.png?v=202205240224')
+                    ->addButton(ElementButton::create('Chi tiết')->url('https://xebagachanhphat.online/product/1'))
                     ->addButton(ElementButton::create('Đặt hàng')
                         ->payload('tellmemore')->type('postback')),
-                Element::create('Xây dựng ứng dụng')
+                Element::create('Macbook')
                     ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
-                    ->image('https://pxwebshop.com/assets/img/service/service1.png')
-                    ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+                    ->image('https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/10/20/637703174146015116_macbook-pro-16-2021-xam-dd.jpg')
+                    ->addButton(ElementButton::create('Chi tiết')->url('https://xebagachanhphat.online/product/2'))
                     ->addButton(ElementButton::create('Đặt hàng')
                         ->payload('tellmemore')->type('postback')),
-                Element::create('Dịch vụ mạng')
+                Element::create('Laptop Văn Phòng')
                     ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
-                    ->image('https://pxwebshop.com/assets/img/service/service1.png')
-                    ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+                    ->image('https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/10/29/637711274464479566_dell-inspiron-n3502-pentium-n5030-win-10-nk-dd.jpg')
+                    ->addButton(ElementButton::create('Chi tiết')->url('https://xebagachanhphat.online/product/3'))
                     ->addButton(ElementButton::create('Đặt hàng')
                         ->payload('tellmemore')->type('postback')),
-                Element::create('Thiết kế logo, banner')
+                Element::create('Laptop Đồ họa')
                     ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
-                    ->image('https://pxwebshop.com/assets/img/service/service1.png')
-                    ->addButton(ElementButton::create('Chi tiết')->url('https://pxwebshop.com/'))
+                    ->image('https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/12/2/637740492418850393_dell-gaming-g15-5511-xam-1.jpg')
+                    ->addButton(ElementButton::create('Chi tiết')->url('https://xebagachanhphat.online/product/4'))
+                    ->addButton(ElementButton::create('Đặt hàng')
+                        ->payload('tellmemore')->type('postback')),
+                Element::create('Laptop Cao Cấp')
+                    ->subtitle('Nơi hoàn hảo cho bạn lựa chọn')
+                    ->image('https://images.fpt.shop/unsafe/fit-in/800x800/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2020/12/25/637445030472487415_dell-xps-13-9310-bac-1.png')
+                    ->addButton(ElementButton::create('Chi tiết')->url('https://xebagachanhphat.online/product/5'))
                     ->addButton(ElementButton::create('Đặt hàng')
                         ->payload('tellmemore')->type('postback')),
             ])
     );
+    // end: ecommerce 
 });
 
 $botman->hears('tellmemore', function($bot) {

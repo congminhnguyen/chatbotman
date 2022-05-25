@@ -45,7 +45,7 @@ class OnboardingConversation extends Conversation
     }
 
     public function askService(){
-        $this->ask('Dịch vụ ' . $this->name . ' muốn là gì?', function() {
+        $this->ask('Sản phẩm ' . $this->name . ' muốn là gì?', function() {
             $this->sayThanks();
         });
     }
