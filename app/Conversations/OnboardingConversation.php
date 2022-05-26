@@ -29,8 +29,17 @@ class OnboardingConversation extends Conversation
         $this->ask('Số điện thoại của ' . $this->name . ' là gì?', function(Answer $answer) {
             // Save result
             $this->phone = $answer->getText();
-
-            $this->askAdress();
+            if(!is_numeric($this->phone)) {
+                $this->say($this->name . ' ơi! Đây không phải là số điện thoại á, ' . $this->name . ' nhập lại nha..');
+                $this->askPhone();
+            } else if (strlen($this->phone) !== 10) {
+                $this->say($this->name . ' ơi! Đây không phải là số điện thoại á, ' . $this->name . ' nhập lại nha..');
+                $this->askPhone();
+            } else {
+                $this->askAdress();
+            }
+            // if($this->phone == 10)
+            
         });
     }
 
